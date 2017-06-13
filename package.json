@@ -48,14 +48,16 @@
     "stringstream": "~0.0.4",
     "tough-cookie": "~2.3.0",
     "tunnel-agent": "^0.6.0",
-    "uuid": "^3.0.0"
+    "uuid": "^3.0.0",
+    "rn-nodeify": "7.0.1"
   },
   "scripts": {
     "test": "npm run lint && npm run test-ci && npm run test-browser",
     "test-ci": "taper tests/test-*.js",
     "test-cov": "istanbul cover tape tests/test-*.js",
     "test-browser": "node tests/browser/start.js",
-    "lint": "standard"
+    "lint": "standard",
+    "postinstall": "rn-nodeify --install --hack"
   },
   "devDependencies": {
     "bluebird": "^3.2.1",
